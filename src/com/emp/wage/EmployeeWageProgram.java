@@ -15,20 +15,22 @@ public class EmployeeWageProgram {
 		
 		int randomNum = random.nextInt(3);
 		
-		if (randomNum==1) 
+		switch(randomNum)
 		{
-			System.out.println("Emloyee is Present");
+		case 0:
+			System.out.println("Employee is Absent");
+			break;
+		
+		case 1:
+			System.out.println("Employee is working fullday");
 			salary = wagePerHour * fullDayHours;
-		}
-		else if(randomNum == 2)
-		{
+			break;
+		
+		case 2:
+			System.out.println("Employee is working Halfday");
 			salary = wagePerHour * halfDayHours;
 		}
-		else
-		{
-			System.out.println("Employee is Absent");
-		}	
-		System.out.println("Salary is:"+salary);
+		System.out.println("Salary is: "+salary);
 	}
 
 }
