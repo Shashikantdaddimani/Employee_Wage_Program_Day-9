@@ -14,8 +14,12 @@ public class EmployeeWageProgram {
 		int salary = 0;
 		int monthlySalary = 0;
 		int monthlyWorkingDays = 20;
-		 for(int i=1; i<monthlyWorkingDays;i++) {
-		int randomNum = random.nextInt(3);
+		int days = 0;
+		int monthlyHours = 0;
+		
+		 while(days!=20 && monthlyHours!=100) {
+			 days++;
+			 int randomNum = random.nextInt(3);
 		
 		switch(randomNum)
 		{
@@ -26,14 +30,17 @@ public class EmployeeWageProgram {
 		case 1:
 			System.out.println("Employee is working fullday");
 			salary = wagePerHour * fullDayHours;
+			monthlyHours = monthlyHours + fullDayHours;
 			break;
 		
 		case 2:
 			System.out.println("Employee is working Halfday");
 			salary = wagePerHour * halfDayHours;
+			monthlyHours = monthlyHours + halfDayHours;
 		}
-		System.out.println("Salary is: "+salary);
+		
 		monthlySalary = monthlySalary +salary;
+		System.out.println("Days"+ days + "Salary is: "+salary);
 	}
 		 System.out.println("Monthly Salary: "+monthlySalary);
 }
