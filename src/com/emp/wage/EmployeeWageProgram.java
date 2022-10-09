@@ -1,24 +1,29 @@
 package com.emp.wage;
 
-import java.util.Random;
+import java.util.*;
 
 public class EmployeeWageProgram {
 
-	public static void main(String[] args) {
-		System.out.println("Welcome to the Employee wage Computation Program");
+//	public static void main(String[] args) {
+//		System.out.println("Welcome to the Employee wage Computation Program");
 		
-		Random random = new Random();
-		int wagePerHour=20;
-		int fullDayHours=8;
-		int halfDayHours=4;
-		int salary = 0;
-		int monthlySalary = 0;
-		int monthlyWorkingDays = 20;
-		int days = 0;
-		int monthlyHours = 0;
 		
-		 while(days!=20 && monthlyHours!=100) {
-			 days++;
+		static int wagePerHour=20;
+		static int fullDayHours=8;
+		static int halfDayHours=4;
+		static int salary = 0;
+		static int monthlySalary = 0;
+		static int monthlyWorkingDays = 20;
+		static int days = 0;
+		static int monthlyHours = 0;
+		 
+		static void computeEmpwage() {
+			
+			Random random = new Random();
+		
+		    while(days!=20 && monthlyHours!=100) {
+			 
+		    	days++;
 			 int randomNum = random.nextInt(3);
 		
 		switch(randomNum)
@@ -44,4 +49,9 @@ public class EmployeeWageProgram {
 	}
 		 System.out.println("Monthly Salary: "+monthlySalary);
 }
+		  void displaymonthlySalary() {
+			System.out.println("Monthly salary: "+monthlySalary);
+		}
 }
+	
+	
